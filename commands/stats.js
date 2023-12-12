@@ -21,6 +21,7 @@ module.exports = {
    */
   run: async (client, message) => {
     const { version } = require("discord.js");
+    const before = Date.now();
     cpuStat.usagePercent(async function (err, percent, seconds) {
       if (err) {
         return console.log(err);
@@ -28,8 +29,9 @@ module.exports = {
       const duration = moment
         .duration(message.client.uptime)
         .format(" D[d], H[h], m[m]");
-
+      
       const embed = new MessageEmbed();
+      const latency = Date.now() - before;
       embed.setColor(client.botconfig.EmbedColor);
       embed.setTitle(`Stats from \`${client.user.username}\``);
       embed.addFields(
@@ -65,7 +67,7 @@ module.exports = {
         },
         {
           name: ":control_knobs: API Latency",
-          value: `┕\`${message.client.ws.ping}ms\``,
+          value: `┕\`${latency}ms\``,
           inline: true,
         }
       );
@@ -100,6 +102,7 @@ module.exports = {
      */
     run: async (client, interaction) => {
       const { version } = require("discord.js");
+      const before = Date.now();
       cpuStat.usagePercent(async function (err, percent, seconds) {
         if (err) {
           return console.log(err);
@@ -109,6 +112,7 @@ module.exports = {
           .format(" D[d], H[h], m[m]");
 
         const embed = new MessageEmbed();
+        const latency = Date.now() - before;
         embed.setColor(client.botconfig.EmbedColor);
         embed.setTitle(`Stats from \`${client.user.username}\``);
         embed.addFields(
@@ -144,7 +148,7 @@ module.exports = {
           },
           {
             name: ":control_knobs: API Latency",
-            value: `┕\`${client.ws.ping}ms\``,
+            value: `┕\`${latency}ms\``,
             inline: true,
           }
         );
