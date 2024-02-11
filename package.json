@@ -35,25 +35,25 @@
     "cpu-stat": "^2.0.1",
     "discord.js": "^12.5.3",
     "discordjs-activity": "^1.4.2",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.2",
     "erela.js": "^2.4.0",
     "erela.js-apple": "^1.2.6",
     "erela.js-deezer": "^1.0.7",
     "erela.js-facebook": "^1.0.4",
     "express": "^4.18.2",
-    "express-session": "^1.17.3",
+    "express-session": "^1.18.0",
     "jsoning": "^0.12.22",
     "lavasfy": "2.3.0",
     "lodash": "^4.17.21",
     "lyrics-finder": "^21.7.0",
     "moment": "^2.30.1",
     "moment-duration-format": "^2.3.2",
-    "mongoose": "^8.0.4",
+    "mongoose": "^8.1.1",
     "node-fetch": "^2.7.0",
     "passport": "^0.7.0",
     "passport-discord": "^0.1.4",
     "pretty-ms": "^7.0.1",
-    "socket.io": "^4.7.3",
+    "socket.io": "^4.7.4",
     "winston": "^3.11.0"
   },
   "devDependencies": {
@@ -63,9 +63,5 @@
   },
   "lint-staged": {
     "*.{js,json,md}": "prettier --write"
-  },
-  "volta": {
-    "node": "12.22.12",
-    "yarn": "3.3.0"
   }
 }
